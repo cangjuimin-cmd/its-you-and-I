@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>For You</title>
+  <title>You & I</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
@@ -11,54 +11,77 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #ffe6ec;
-      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffd6e0, #fff1f5);
+      font-family: 'Segoe UI', Arial, sans-serif;
     }
-    .box {
+
+    .card {
       background: white;
-      padding: 25px;
-      border-radius: 15px;
+      padding: 28px;
+      border-radius: 18px;
       text-align: center;
-      max-width: 300px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      max-width: 320px;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
     }
+
     h2 {
       color: #ff4d6d;
+      margin-bottom: 10px;
     }
+
+    p {
+      color: #444;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
     button {
-      margin-top: 15px;
-      padding: 10px 18px;
+      margin-top: 18px;
+      padding: 10px 20px;
       border: none;
-      border-radius: 20px;
+      border-radius: 25px;
       background: #ff4d6d;
       color: white;
       font-size: 14px;
+      cursor: pointer;
     }
-    #msg {
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    #hidden {
       display: none;
-      margin-top: 15px;
+      margin-top: 16px;
       color: #333;
+      font-weight: 500;
     }
   </style>
 </head>
 <body>
 
-  <div class="box">
-    <h2>Hey 🌸</h2>
-    <p>I made something small for you.</p>
-    <button onclick="show()">Tap here 💫</button>
-    <div id="msg">
+  <div class="card">
+    <h2>You & I 🌸</h2>
+    <p>
+      This isn’t a big speech.<br>
+      Just something honest.
+    </p>
+
+    <button onclick="showMessage()">Tap gently 💗</button>
+
+    <div id="hidden">
       <p>
-        I like your vibe.<br>
-        I enjoy talking to you.<br><br>
-        That’s all 😊
+        this is my affection for you.<br>
+        I like the way we connect.<br><br>
+        Whatever this becomes,<br>
+        I’m glad it’s *you & I* 🤍
       </p>
     </div>
   </div>
 
   <script>
-    function show() {
-      document.getElementById("msg").style.display = "block";
+    function showMessage() {
+      document.getElementById("hidden").style.display = "block";
     }
   </script>
 
